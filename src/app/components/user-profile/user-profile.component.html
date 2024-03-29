@@ -1,0 +1,10 @@
+<main id="mainUserProfile">
+  <img [src]="user.photo" [alt]="user.name" />
+  <h2>Nom : {{ user.name }}</h2>
+  <h2>Prénom : {{ user.firstName }}</h2>
+  <p [hidden]="!isAgeDisplay">Âge : {{ user.age }}</p>
+  <p>{{ user.quote }}</p>
+  <input type="text" [(ngModel)]="user.quote" />
+  <br />
+  <button (click)="toggleAgeDisplay()">Afficher / masquer mon âge</button>
+</main>
