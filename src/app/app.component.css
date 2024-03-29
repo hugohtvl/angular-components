@@ -1,0 +1,13 @@
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
