@@ -2,11 +2,17 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BlockComponent } from './components/block/block.component';
 import { userProfileComponent } from './components/user-profile/user-profile.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BlockComponent, userProfileComponent],
+  imports: [
+    RouterOutlet,
+    BlockComponent,
+    userProfileComponent,
+    ButtonsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

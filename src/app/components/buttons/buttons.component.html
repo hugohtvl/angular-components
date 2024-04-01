@@ -1,0 +1,6 @@
+<main id="mainButtons">
+  <h1 [ngStyle]="{ color: isAdmin ? 'red' : '' }">Bonjour !</h1>
+  <button>View</button>
+  <button *ngIf="isAdmin">Edit</button><br />
+  <button (click)="toggleisAdmin()">Change isAdmin</button>
+</main>
