@@ -1,0 +1,41 @@
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+
+  <fieldset>
+    <label for="contact">Adresse e-mail</label>
+    <input id="contact" name="contact" type="email" [(ngModel)]="newUser.contact" #contact="ngModel" required email>
+  </fieldset>
+  <div *ngIf="myForm.submitted && contact.errors">
+    <span *ngIf="contact.errors?.['required']">L'adresse email est requise</span>
+    <span *ngIf="contact.errors?.['email']">L'adresse email est invalide</span>
+  </div>
+
+  <fieldset>
+    <label for="firstname">Firstname</label>
+    <input id="firstname" name="firstname" type="text" [(ngModel)]="newUser.firstname" #firstname="ngModel" required minlength="3" maxlength="15">
+  </fieldset>
+  <div *ngIf="myForm.submitted && firstname.errors">
+    <span *ngIf="firstname.errors?.['required']">Le prénom est requis</span>
+    <span *ngIf="firstname.errors?.['minlength']">Le prénom doit comporter au moins 3 caractères</span>
+    <span *ngIf="firstname.errors?.['maxlength']">Le prénom ne doit pas dépasser 15 caractères</span>
+  </div>
+
+  <fieldset>
+    <label for="lastname">Lastname</label>
+    <input id="lastname" name="lastname" type="text" [(ngModel)]="newUser.lastname" #lastname="ngModel" required minlength="3" maxlength="15">
+  </fieldset>
+  <div *ngIf="myForm.submitted && lastname.errors">
+    <span *ngIf="lastname.errors?.['required']">Le nom de famille est requis</span>
+    <span *ngIf="lastname.errors?.['minlength']">Le nom de famille doit comporter au moins 3 caractères</span>
+    <span *ngIf="lastname.errors?.['maxlength']">Le nom de famille ne doit pas dépasser 15 caractères</span>
+  </div>
+
+  <fieldset>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="text" [(ngModel)]="newUser.password" #password="ngModel" required>
+  </fieldset>
+  <div *ngIf="myForm.submitted && firstname.errors">
+    <span *ngIf="password.errors?.['required']">Le mot de passe est requis</span>
+  </div>
+
+  <button type="submit">Inscription</button>
+</form>

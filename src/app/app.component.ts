@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { BlockComponent } from './components/block/block.component';
 import { userProfileComponent } from './components/user-profile/user-profile.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
